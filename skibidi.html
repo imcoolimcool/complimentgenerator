@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Compliment Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+        #compliment-container {
+            text-align: center;
+            background-color: #ffebcd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 80%;
+        }
+        #compliment {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2f4f4f;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #32cd32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #228b22;
+        }
+    </style>
+</head>
+<body>
+
+<div id="compliment-container">
+    <p id="compliment">Click the button for a compliment!</p>
+    <button onclick="generateCompliment()">Give me a compliment!</button>
+</div>
+
+<script>
+    // List of 50 compliments
+    const compliments = [
+        "You're amazing!",
+        "You're a true gem!",
+        "You're doing great!",
+        "You're so smart!",
+        "You have a beautiful smile!",
+        "You're unstoppable!",
+        "You light up the room!",
+        "You're so kind and thoughtful!",
+        "You're an inspiration!",
+        "You're one of a kind!",
+        "You're so strong!",
+        "You have an incredible work ethic!",
+        "You're always so positive!",
+        "You have a great sense of humor!",
+        "You're always so helpful!",
+        "You're a great friend!",
+        "You make the world a better place!",
+        "You brighten up any room!",
+        "You're so creative!",
+        "You are a true leader!",
+        "You're full of great ideas!",
+        "You're a wonderful listener!",
+        "You radiate kindness!",
+        "You are so talented!",
+        "You're so courageous!",
+        "You have an amazing heart!",
+        "You inspire others every day!",
+        "You're always so thoughtful!",
+        "You're incredibly strong!",
+        "You're a breath of fresh air!",
+        "You're so unique!",
+        "You make life so much fun!",
+        "You bring so much joy to others!",
+        "You're an incredible person!",
+        "You're such a good soul!",
+        "You have a beautiful heart!",
+        "You're a ray of sunshine!",
+        "You make people feel special!",
+        "You're a true blessing!",
+        "You're the definition of grace!",
+        "You're always so considerate!",
+        "You're an amazing problem-solver!",
+        "You bring out the best in people!",
+        "You have such a calming presence!",
+        "You're so adventurous!",
+        "You always bring your A-game!",
+        "You're a person of integrity!",
+        "You're always so encouraging!",
+        "You're such a go-getter!"
+    ];
+
+    // Function to generate a random compliment
+    function generateCompliment() {
+        const randomIndex = Math.floor(Math.random() * compliments.length);
+        document.getElementById('compliment').textContent = compliments[randomIndex];
+    }
+</script>
+
+</body>
+</html>
